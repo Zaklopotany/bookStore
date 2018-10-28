@@ -24,7 +24,7 @@ public class OrderController {
     @RequestMapping(value = "/makeOrder", method = RequestMethod.POST)
     public void makeOrder(Map<Long, Integer> books) {
 
-        //step to do
+        //steps to do
         // fetch books
         //check availability
         // calculate discounts
