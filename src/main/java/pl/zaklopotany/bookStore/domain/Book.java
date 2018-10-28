@@ -25,5 +25,17 @@ public class Book {
             inverseJoinColumns = @JoinColumn(name = "author_id"))
     private List<Author> authors;
 
+    @Transient
+    private double discount;
+
+    public void setDiscount(double discount) {
+        this.discount = discount;
+
+    }
+
+    public double getDiscount() {
+        return this.discount;
+    }
+
 
 }
