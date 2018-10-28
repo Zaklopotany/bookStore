@@ -1,9 +1,8 @@
 package pl.zaklopotany.bookStore.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Book {
@@ -13,6 +12,12 @@ public class Book {
     private Long id;
 
     private String name;
+
+    @ManyToMany(cascade =  {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(name = "user_role"
+            , joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private List<Author> authors;
 
 
 }
