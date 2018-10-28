@@ -11,6 +11,9 @@ public class Order  {
     @GeneratedValue
     private Long id;
 
+
+    private double price;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="id_book")
     private List<Book> books = new ArrayList<>();
