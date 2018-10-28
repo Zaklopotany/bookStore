@@ -12,7 +12,7 @@ public class Order  {
     private Long id;
 
 
-    private double price;
+    private double totalPrice;
 
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name="id_book")
