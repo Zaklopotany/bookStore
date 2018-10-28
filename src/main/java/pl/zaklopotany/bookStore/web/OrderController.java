@@ -19,15 +19,12 @@ public class OrderController {
     DiscountService discountService;
 
 
-    @RequestMapping(name = "/book")
+    @RequestMapping(name = "/order")
     public void makeOrder(Map<Long, Integer> books) {
 
         List<Book> book = new ArrayList<>();
        for(Map.Entry entry: books.entrySet()) {
            entry.getKey()
-
-
-
        }
 
        Order order = new Order();
