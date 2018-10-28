@@ -1,12 +1,10 @@
 package pl.zaklopotany.bookStore.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table
 public class Author {
 
     @Id
