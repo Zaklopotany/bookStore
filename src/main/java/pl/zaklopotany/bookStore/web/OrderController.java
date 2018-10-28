@@ -24,6 +24,12 @@ public class OrderController {
     @RequestMapping(value = "/makeOrder", method = RequestMethod.POST)
     public void makeOrder(Map<Long, Integer> books) {
 
+        //step to do
+        // fetch books
+        //check availability
+        // calculate discounts
+        //send response
+
         List<Book> book = new ArrayList<>();
 
         for (Map.Entry entry : books.entrySet()) {
